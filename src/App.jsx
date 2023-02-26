@@ -1,34 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Global from "./styles/Global";
+import { HomeText, Navbar, NavItem, NavList, Section } from "./styles/Styles";
+import logo from './assets/logo.svg'
+import { PrimaryFontText } from "./styles/Fonts";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <>
+      <Global />
+      <PrimaryFontText />
+      <Section>
+        <Navbar>
+          <img src={logo} alt="Logo" />
+
+          <NavList>
+            <NavItem>Inicio</NavItem>
+            <NavItem>O que fazemos</NavItem>
+            <NavItem>Cases</NavItem>
+            <NavItem>Equipe</NavItem>
+            <NavItem>Contato</NavItem>
+          </NavList>
+        </Navbar>
+
+        <HomeText>
+          <h1>SOLUÇÕES <strong>CRIATIVAS</strong> E <strong>FUNCIONAIS</strong> PARA O SEU NEGÓCIO
+          </h1>
+          <p>Somos uma Agência de Marketing especializada em criação e desenvolvimento denaming,
+            branding e tudo mais que uma empresa precisa para se relacionar da melhor forma com o
+            mercado</p>
+          {/* <button>saiba mais</button> */}
+        </HomeText>
+
+
+      </Section>
+    </>
   )
 }
 
-export default App
+export default App;
