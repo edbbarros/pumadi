@@ -1,5 +1,5 @@
 import logo from './assets/logo.svg'
-import branding from './assets/branding.png';
+import branding from './assets/BRANDING.png';
 import estrategia from './assets/ESTRATEGIA.png'
 import execucao from './assets/EXECUCAO.png'
 import midiaOnline from './assets/MIDIAONLINE.png'
