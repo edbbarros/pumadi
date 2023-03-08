@@ -1,33 +1,32 @@
 import Global from "./styles/Global";
 import { About, AboutMkt, AboutMkt1, Card, Card1, Card2, Card3, Card4, HomeCard, HomeText, Navbar, NavItem, NavList, Section, Sectionfooter, SectionForm } from "./styles/Styles";
 import { PrimaryFontText } from "./styles/Fonts";
-import { logo, branding, estrategia, execucao, midiaOnline, propaganda, design, webLogo, Marcas } from './Index.jsx';
+import { logo, branding, estrategia, execucao, midiaOnline, propaganda, design, webLogo, Marcas, InstagramLogo, BehanceLogo, LinkedinLogo, Basico, Completo, Intermediario } from './Index.jsx';
 
 const App = () => {
   return (
     <>
       <Global />
       <PrimaryFontText />
-      <Section>
+      <Section id="Inicio">
         <Navbar>
           <img src={logo} alt="Logo" />
           <NavList>
-            <NavItem>Inicio</NavItem>
-            <NavItem>O que fazemos</NavItem>
-            <NavItem>Cases</NavItem>
-            <NavItem>Equipe</NavItem>
-            <NavItem>Contato</NavItem>
+            <NavItem><a href="#Inicio">Inicio</a></NavItem>
+            <NavItem><a href="#About">O que fazemos</a></NavItem>
+            <NavItem><a href="#Equipe">Equipe</a></NavItem>
+            <NavItem><a href="#Cases">Cases</a></NavItem>
+            <NavItem><a href="#Contato">Contato</a></NavItem>
           </NavList>
         </Navbar>
 
-        <HomeText >
+        <HomeText>
           <h1>SOLUÇÕES <strong>CRIATIVAS</strong> E <strong>FUNCIONAIS</strong> PARA O SEU NEGÓCIO
           </h1>
           <p>Somos uma Agência de Marketing especializada em criação e desenvolvimento denaming,
             branding e tudo mais que uma empresa precisa para se relacionar da melhor forma com o
             mercado</p>
-          {/* <button>saiba mais</button> */}
-
+          <a href="https://api.whatsapp.com/send/?phone=5581982207312&text&type=phone_number&app_absent=0" target="_blank">Saiba mais</a>
         </HomeText>
       </Section>
 
@@ -81,7 +80,7 @@ const App = () => {
           </div>
         </div>
       </Card>
-      <About>
+      <About id="About">
         <h1>O QUE <strong>FAZEMOS?</strong></h1>
       </About>
       <Card1>
@@ -116,7 +115,7 @@ const App = () => {
         </div>
       </Card1>
 
-      <Card2>
+      <Card2 id="Equipe">
         <div className="containerCardLarge">
           <div className="cardLarge border">
             <h1>EQUIPE <strong>PREPARADA</strong> E <strong>
@@ -126,12 +125,12 @@ const App = () => {
         </div>
       </Card2>
 
-      <AboutMkt>
+      <AboutMkt id="About">
         <h1> CLIENTES QUE JÁ PASSARAM PELA PUMADI </h1>
         <h3> Nossos cases de sucesso </h3>
       </AboutMkt>
 
-      <Card3>
+      <Card3 id="Cases">
         <div className="containerCardLarge1">
           <div className="cardLarge1 border1">
             <img src={Marcas} alt="Marcas dos clientes" />
@@ -150,7 +149,7 @@ const App = () => {
               <h1>BÁSICO</h1>
             </div>
             <div className="card2">
-              <h1><strong>R$299,</strong>00<sub>/MÊS</sub></h1>
+              <img src={Basico} alt="" />
             </div>
           </div>
           <div className="card1">
@@ -158,7 +157,7 @@ const App = () => {
               <h1>INTERMEDIÁRIO</h1>
             </div>
             <div className="card2">
-              <h1><strong>R$799,</strong>00<sub>/MÊS</sub></h1>
+              <img src={Intermediario} alt="" />
             </div>
           </div>
           <div className="card1">
@@ -166,18 +165,15 @@ const App = () => {
               <h1>COMPLETO</h1>
             </div>
             <div className="card2">
-              <h1><strong>R$1249,</strong>00<sub>/MÊS</sub></h1>
+              <img src={Completo} alt="" />
             </div>
           </div>
         </div>
 
       </Card4>
 
-      {/* <CatButton>
-        <button>QUERO CONHECER</button>
-      </CatButton> */}
 
-      <SectionForm>
+      <SectionForm id="Contato">
         <h1>FAÇA O SEU NEGÓCIO DECOLAR <strong>
           AGORA!</strong></h1>
         <div className="containerForm border">
@@ -218,17 +214,29 @@ const App = () => {
         </div>
       </SectionForm>
 
-      <Sectionfooter id="Inicio">
+      <Sectionfooter >
         <div className="containerFooter">
           <ul>
             <li><strong>Contato</strong></li>
             <li>Pina | Recife - PE</li>
-            <li>(81) 4042-9575 | (81) 98220-7312</li>
+            <li>(81) 4042-8101 | (81) 98220-7312</li>
             <li>mkt.pumadi@gmail.com</li>
             <li>CNPJ: 49.102.568/0001-02</li>
           </ul>
-
-          <img src={logo} alt="Logo" />
+          <div className="containerLogo">
+            <img src={logo} alt="Logo" />
+            <div className="containerLogoLink">
+              <a href="https://www.behance.net/pumadi" target="_blank">
+                <img src={BehanceLogo} alt="Instagram Logo" />
+              </a>
+              <a href="https://www.linkedin.com/company/agenciapumadi/" target="_blank">
+                <img src={LinkedinLogo} alt="Instagram Logo" />
+              </a>
+              <a href="https://www.instagram.com/agenciapumadi/" target="_blank">
+                <img src={InstagramLogo} alt="Instagram Logo" />
+              </a>
+            </div>
+          </div>
         </div>
         <hr />
         <div className="Copyright">

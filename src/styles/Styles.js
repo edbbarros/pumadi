@@ -8,14 +8,16 @@ background-image: url(${Background1});
 background-repeat: no-repeat;
 background-size: 100% 100%;
 height: 100vh;
+
 `
 
 export const Navbar = styled.nav`
 display: flex;
-justify-content: space-evenly;
+justify-content: space-between;
 align-items: center;
   img {
-    width: 20rem
+    margin-left: 1rem;
+    width: 15rem
   }
 `
 export const NavList = styled.ul`
@@ -24,6 +26,17 @@ export const NavList = styled.ul`
   background-color: #8710c3;
   border-radius: 5rem;
   gap: 1rem;
+  margin-right: 1rem;
+
+  a {
+  text-decoration:none;
+  color: #ffF;
+  }
+
+  a:hover{
+    color: #8710c3;
+    background-color: #ffffff;
+  }
 
 `;
 
@@ -43,20 +56,46 @@ export const NavItem = styled.li`
 `;
 
 export const HomeText = styled.header`
-padding: 4rem;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+gap: 2.0rem;
+margin-top: 3%;
+padding: 5%;
 color: #ffffff;
 
+
   h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight:300;
     width: 35rem;
   }
   p{
-    margin-top: 2rem;
+    
     font-size: 1rem;
     font-weight:300;
     width: 25rem;
   }
+
+    a { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration:none;
+    color: #fff;
+    width: 10rem;
+    background-color: #8710c3;
+    border-style: none;
+    border-radius: 4rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  a:hover{
+    color: #8710c3;
+    background-color: #ffffff;
+  }
+
 `
 
 export const HomeCard = styled.header`
@@ -68,8 +107,8 @@ export const HomeCard = styled.header`
   h1{
     font-size: 2.5rem;
     font-weight:300;
-
 }
+
   h3{
     margin-top: 1rem;
     font-size: 1rem;
@@ -83,16 +122,19 @@ export const Card = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   color: #8710c3;
+  
   }
 .container{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 30rem;
-  width: 25rem;
+  height: 28rem;
+  width: 23rem;
   background-color: #8710c3;
   border-radius: 2rem;
   margin-bottom: 10rem;
@@ -101,8 +143,8 @@ export const Card = styled.section`
         display:flex;
         align-items: center;
         justify-content: center;
-        width: 13rem;
-        height: 13rem;
+        width: 11rem;
+        height: 11rem;
         border-radius: 50%;
         background-color: #660099;
         position: absolute;
@@ -119,10 +161,11 @@ export const Card = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25rem;
-  width: 25rem;
+  height: 23rem;
+  width: 23rem;
   background-color: #ffffff;
   border-radius: 2rem;
+  text-align: center;
   }
    h1{
     margin-top:5rem;
@@ -142,7 +185,6 @@ export const About = styled.section`
   align-items: center;
   color: #ffffff;
    h1{
-    /* margin-top:5rem; */
     font-size: 2rem;
     font-weight: 700;
   }
@@ -154,7 +196,10 @@ export const Card1 = styled.section`
   flex-direction: row;
   justify-content: center;
   color: #ffffff;
-
+  gap: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  
 }
 
 .container1{
@@ -164,7 +209,8 @@ export const Card1 = styled.section`
   align-items: center;
   height: 25rem;
   width: 20rem;
-  /* margin-bottom: 2rem; */
+  text-align: center;
+
 
     img {
       height: 6rem;
@@ -180,7 +226,7 @@ export const Card1 = styled.section`
       font-size: 0.8rem;
       font-weight: 300;
       width: 13rem;
-      /* margin-bottom: 1rem; */
+
 
   }
 }
@@ -211,19 +257,20 @@ export const Card2 = styled.section`
   }
 
   h1{ 
-    font-size: 2rem;
-    width:40rem;
+    font-size: 2.2rem;
+    width:45rem;
     margin-bottom: 2rem;
     font-weight: 300;
+    text-align: center;
   }
   button{
     color: #fff;
-    width: 15rem;
+    width: 20rem;
     background-color: #660099;
     border-style: none;
     border-radius: 4rem;
-    height: 2rem;
-    font-size: 1rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
   }
 `
@@ -334,28 +381,12 @@ export const Card4 = styled.section`
     width: 20rem;
     background-color: #ffffff;
     border-radius: 3rem;
-      h1{
-      color: #660099;
-      font-size: 1.8rem;
-      font-weight: 700;
+    img {
+      width: 17rem;
     }
   }
   `
-// export const CatButton = styled.button`
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     margin-bottom: 10rem;
 
-//   button {
-//     background-color: #8710c3;
-//     color: #fff;
-//     border-style: none;
-//     width: 10rem;
-//     height: 5rem;
-
-//    }
-// `
 
 export const SectionForm = styled.section`
 background-image: url(${Background2}); 
@@ -367,12 +398,18 @@ flex-direction: row;
 justify-content: space-evenly;
 align-items: center;
 
+
   h1 {
     align-items: center;
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: 300;
     color: #fff;
-    width: 40rem;
+    width: 35rem;
+    text-align: start;
+    strong {
+      font-size: 5rem;
+      
+    }
   }
   .containerForm {
     display: flex;
@@ -384,6 +421,7 @@ align-items: center;
     width: 33rem;
     background-color: #8710c3;
     border-radius: 3rem;
+    margin-top: 3rem;
     margin-bottom: 5rem;
 
       label {
@@ -418,13 +456,14 @@ align-items: center;
       font-size: 1rem;
       font-weight: 300;
     }
+    
     option {
       font-size: 1rem;
       font-weight: 700;
     }
 
     button {
-      margin-top: 1rem;
+    margin-top: 1rem;
     color: #fff;
     width: 15rem;
     background-color: #660099;
@@ -444,13 +483,16 @@ align-items: center;
 `
 
 export const Sectionfooter = styled.footer`
+
   .containerFooter {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
     margin-bottom: 5rem;
     color: #fff;
-
+  
       ul {
         list-style: none;
       }
@@ -459,9 +501,24 @@ export const Sectionfooter = styled.footer`
         padding: 0.5rem;
       }
 
-      img {
-        height:15rem
-      }
+      .containerLogo {
+        display: flex;
+        flex-flow: column ;
+        align-items: center;
+
+       img {
+        width: 20rem ;
+        margin-bottom: 2rem;
+          }
+        }
+
+        .containerLogoLink{
+          display: flex;
+          gap: 1.5rem;
+          img {
+           width: 3rem;
+          }
+        }
   }
       hr { 
         margin-bottom: 2rem;
