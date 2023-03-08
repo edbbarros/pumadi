@@ -269,12 +269,12 @@ export const Card2 = styled.section`
     justify-content: center;
     text-decoration:none;
     color: #fff;
-    width: 10rem;
+    width: 20rem;
     background-color: #660099;
     border-style: none;
     border-radius: 4rem;
-    height: 2rem;
-    font-size: 1rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
   }
   a:hover{
