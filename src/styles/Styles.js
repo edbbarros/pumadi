@@ -263,15 +263,23 @@ export const Card2 = styled.section`
     font-weight: 300;
     text-align: center;
   }
-  button{
+  a { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration:none;
     color: #fff;
-    width: 20rem;
+    width: 10rem;
     background-color: #660099;
     border-style: none;
     border-radius: 4rem;
-    height: 3.5rem;
-    font-size: 1.5rem;
+    height: 2rem;
+    font-size: 1rem;
     font-weight: 700;
+  }
+  a:hover{
+    color: #660099;
+    background-color: #fff;
   }
 `
 
@@ -423,6 +431,7 @@ align-items: center;
     border-radius: 3rem;
     margin-top: 3rem;
     margin-bottom: 5rem;
+    
 
       label {
       align-self:flex-start;

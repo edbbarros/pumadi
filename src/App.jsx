@@ -120,7 +120,9 @@ const App = () => {
           <div className="cardLarge border">
             <h1>EQUIPE <strong>PREPARADA</strong> E <strong>
               PRONTA</strong> PARA FAZER SEU NEGÓCIO DECOLAR!</h1>
-            <button>Quero conhecer</button>
+            <a href="https://www.linkedin.com/company/agenciapumadi/" target="_blank">Quero Conhecer</a>
+
+
           </div>
         </div>
       </Card2>
