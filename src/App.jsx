@@ -121,8 +121,6 @@ const App = () => {
             <h1>EQUIPE <strong>PREPARADA</strong> E <strong>
               PRONTA</strong> PARA FAZER SEU NEGÓCIO DECOLAR!</h1>
             <a href="https://www.linkedin.com/company/agenciapumadi/" target="_blank">Quero Conhecer</a>
-
-
           </div>
         </div>
       </Card2>

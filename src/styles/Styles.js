@@ -2,13 +2,15 @@ import styled from "styled-components";
 import Background1 from '../assets/BG1.png';
 import { Background2 } from '../Index.jsx';
 
-
 export const Section = styled.section`
 background-image: url(${Background1}); 
 background-repeat: no-repeat;
 background-size: 100% 100%;
 height: 100vh;
 
+@media (max-width:640px) {
+  height: 100vh;
+}
 `
 
 export const Navbar = styled.nav`
@@ -19,6 +21,11 @@ align-items: center;
     margin-left: 1rem;
     width: 15rem
   }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+
 `
 export const NavList = styled.ul`
   display: flex;
@@ -36,6 +43,15 @@ export const NavList = styled.ul`
   a:hover{
     color: #8710c3;
     background-color: #ffffff;
+  }
+  @media (max-width: 720px) {
+    width: 20rem;
+    height: 3.5rem;
+    gap: 0;
+    
+    a {
+      font-size: 1rem;
+    }
   }
 
 `;
@@ -65,17 +81,17 @@ padding: 5%;
 color: #ffffff;
 
 
-  h1{
-    font-size: 2.5rem;
-    font-weight:300;
-    width: 35rem;
-  }
-  p{
-    
-    font-size: 1rem;
-    font-weight:300;
-    width: 25rem;
-  }
+    h1 {
+      font-size: 2.5rem;
+      font-weight:300;
+      width: 35rem;
+    }
+    p {
+      
+      font-size: 1rem;
+      font-weight:300;
+      width: 25rem;
+    }
 
     a { 
     display: flex;
@@ -96,6 +112,23 @@ color: #ffffff;
     background-color: #ffffff;
   }
 
+  @media (max-width: 640px) {
+  padding: 1%;
+  text-align: center;
+  align-items: center;
+
+      h1 {
+      font-size: 1.5rem;
+      font-weight:300;
+      width: 20rem;
+    }
+
+    p {
+      font-size: 1rem;
+      width: 19rem;
+      
+    }
+  }
 `
 
 export const HomeCard = styled.header`
@@ -115,20 +148,35 @@ export const HomeCard = styled.header`
     font-weight:300;
     margin-bottom: 5rem;
   }
+
+  @media (max-width: 640px) {
+
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight:300;
+  }
+
+    h3 {
+    font-size: 1rem;
+    text-align: center;
+    width: 22rem;
+    }
+}
 `
 
 export const Card = styled.section`
-.containerArea{
+.containerArea {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
   color: #8710c3;
   
   }
-.container{
+.container {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -139,7 +187,7 @@ export const Card = styled.section`
   border-radius: 2rem;
   margin-bottom: 10rem;
   position: relative;
-    .circle{
+    .circle {
         display:flex;
         align-items: center;
         justify-content: center;
@@ -156,7 +204,7 @@ export const Card = styled.section`
     }
   }
 
-.container2{
+.container2 { 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,16 +215,60 @@ export const Card = styled.section`
   border-radius: 2rem;
   text-align: center;
   }
-   h1{
+   h1 {
     margin-top:5rem;
     font-size: 2rem;
     font-weight: 700;
   }
-   h3{    
+   h3 {    
+    width: 20rem;
     margin-top: 1rem;
     font-size: 1rem;
-    font-weight:300;
-    width: 20rem;
+    font-weight: 300;
+  }
+
+
+  @media screen and (max-width: 640px) {
+    .containerArea {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+   
+    .container {
+      height: 25rem;
+      width: 18rem;
+      margin-bottom: 3.5rem;
+        .circle {
+          top: 18px;
+          width: 8rem;
+          height: 8rem;
+            img {
+              height: 5rem;
+              width: 5rem;
+        }
+      }
+    }
+
+    .container2 {
+      height: 20rem;
+      width: 18rem;
+   
+    }
+
+    h1{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        
+  }
+      h3{
+        text-align: center;    
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight:300;
+        width: 15rem;
+      }
+
   }
 `
 export const About = styled.section`
@@ -188,18 +280,23 @@ export const About = styled.section`
     font-size: 2rem;
     font-weight: 700;
   }
+
+  @media (max-width:640px) {
+   h1 {
+    font-size: 1.5rem;
+   }
+  }
 `
 
 export const Card1 = styled.section`
 .containerArea1{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   color: #ffffff;
   gap: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  
 }
 
 .container1{
@@ -207,12 +304,14 @@ export const Card1 = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25rem;
-  width: 20rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+  height: 18rem;
+  width: 18rem;
   text-align: center;
 
-
     img {
+    
       height: 6rem;
       width: 6rem;
     }
@@ -223,11 +322,10 @@ export const Card1 = styled.section`
   }
     h3 {    
       margin-top: 0.5rem;
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-weight: 300;
       width: 13rem;
-
-
+      margin-bottom: 5rem;
   }
 }
 `
@@ -281,6 +379,23 @@ export const Card2 = styled.section`
     color: #660099;
     background-color: #fff;
   }
+
+  @media (max-width: 640px) {
+    .cardLarge {
+    width: 22rem;
+    height: 18rem;
+      h1 { 
+      font-size: 1.5rem;
+      width:22rem;
+  }
+  a { 
+    width: 18rem;
+    height: 3rem;
+    font-size: 1.3rem;
+
+  }
+    }
+  }
 `
 
 export const AboutMkt = styled.section`
@@ -300,6 +415,13 @@ export const AboutMkt = styled.section`
       font-size: 1rem;
       font-weight: 300;
       margin-bottom: 4rem;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
     }
 `
 
@@ -330,6 +452,15 @@ export const Card3 = styled.section`
   img {
     width: 60rem;
   }
+
+  @media (max-width: 720px) {
+   
+
+  img {
+    height: 20rem;
+    width:24rem;
+  }
+  }
 `
 
 export const AboutMkt1 = styled.section`
@@ -354,6 +485,11 @@ export const Card4 = styled.section`
       align-items: center;
       margin-bottom: 10rem;
       gap: 3rem;
+
+      @media (max-width: 720px) {
+        display: flex;
+        flex-direction: column;
+      }
       }
 
   .card1{
@@ -393,6 +529,8 @@ export const Card4 = styled.section`
       width: 17rem;
     }
   }
+
+
   `
 
 
@@ -405,7 +543,6 @@ display: flex;
 flex-direction: row;
 justify-content: space-evenly;
 align-items: center;
-
 
   h1 {
     align-items: center;
@@ -432,7 +569,6 @@ align-items: center;
     margin-top: 3rem;
     margin-bottom: 5rem;
     
-
       label {
       align-self:flex-start;
       margin-left: 4rem; 
@@ -489,6 +625,43 @@ align-items: center;
     box-shadow: 0.5rem 0.5rem 0px 0px #fff;
     border-radius: 3rem;
   }
+
+  @media (max-width: 640px) {
+          display: flex;
+          flex-direction: column;
+
+          h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            width: 20rem;
+
+            strong {
+              font-size: 2.5rem;
+            }
+          }
+          .containerForm {
+              gap: 0.5rem;
+              height: 100%;
+              width: 80vw;            
+              margin-top: 2rem;
+              
+                label {
+                align-self:flex-start;
+                margin-left: 1rem; 
+                font-size: 1rem;
+                
+              }
+
+                input {
+                  height: 3rem;
+                  width: 15rem;
+                }
+
+                select { 
+                  width: 15rem;
+                }
+  }
+        }
 `
 
 export const Sectionfooter = styled.footer`
@@ -541,5 +714,31 @@ export const Sectionfooter = styled.footer`
         font-weight: 300;
         margin-bottom: 2rem;
       }
+
+      @media screen and (max-width: 640px) {
+        .containerFooter {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          .containerLogo {
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+
+            img {
+              width: 15rem;
+              margin-bottom: 2rem;
+                }
+              }
+
+              .containerLogoLink {
+                img {
+                 width: 3rem;
+                }
+              }
+        }
+
+  }
+      
 
 `
