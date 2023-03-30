@@ -2,8 +2,11 @@ import Global from "./styles/Global";
 import { About, AboutMkt, AboutMkt1, Card, Card1, Card2, Card3, Card4, HomeCard, HomeText, Navbar, NavItem, NavList, Section, Sectionfooter, SectionForm } from "./styles/Styles";
 import { PrimaryFontText } from "./styles/Fonts";
 import { logo, branding, estrategia, execucao, midiaOnline, propaganda, design, webLogo, Marcas, InstagramLogo, BehanceLogo, LinkedinLogo, Basico, Completo, Intermediario } from './Index.jsx';
+import { useState } from "react";
 
 const App = () => {
+  const [isHidden, setIsHidden] = useState(true);
+
   return (
     <>
       <Global />
@@ -11,12 +14,15 @@ const App = () => {
       <Section id="Inicio">
         <Navbar>
           <img src={logo} alt="Logo" />
-          <NavList>
+          <button id="menu" onClick={() => setIsHidden(c => !c)} type="button">
+          <svg fill="#ffffff" height="200px" width="50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>fiction</title> <path d="M1673.9,1363.2L1673.9,1363.2c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0 c0-52.3,42.4-94.3,94.3-94.3h1366.8C1631.5,1268.5,1673.9,1310.9,1673.9,1363.2z"></path> <path d="M1673.9,895.6L1673.9,895.6c0,52.3-42.4,94.3-94.3,94.3H213c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h1366.6C1631.5,800.8,1673.9,843.2,1673.9,895.6z"></path> <path d="M1673.9,427.9L1673.9,427.9c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h1366.8C1631.5,333.2,1673.9,375.6,1673.9,427.9z"></path> </g></svg>
+          </button>
+          <NavList className={`${isHidden ? 'm-hidden': ''}`}>
             <NavItem><a href="#Inicio">Inicio</a></NavItem>
             <NavItem><a href="#About">O que fazemos</a></NavItem>
-            <NavItem><a href="#Equipe">Equipe</a></NavItem>
-            <NavItem><a href="#Cases">Cases</a></NavItem>
-            <NavItem><a href="#Contato">Contato</a></NavItem>
+            <NavItem><a className="m-hidden" href="#Equipe">Equipe</a></NavItem>
+            <NavItem><a className="m-hidden" href="#Cases">Cases</a></NavItem>
+            <NavItem><a className="m-hidden" href="#Contato">Contato</a></NavItem>
           </NavList>
         </Navbar>
 
